@@ -1,9 +1,14 @@
-let MAD = -2200;
-let EUR = MAD / 11;
-if (MAD <= 0) {
-    console.log("Invalid currency value");
-} 
-else {
-    console.log("currency in MAD: " + MAD);
-    console.log("currency in EUR: " + EUR);
-}
+
+const readline = require('readline')
+const curr = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+curr.question("Amount of money u want to convert: ", (answer) => {
+    if (answer >= 1){
+        console.log("currency in euro: " + (answer / 11));
+    }
+    else if (answer >= 0)
+        console.log("value is negative or null");
+    curr.close();
+});
