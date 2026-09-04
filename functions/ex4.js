@@ -1,5 +1,5 @@
-function saluerClient(nom){
-    return (`Bonjour Client ${nom}`);
+function saluerClient(nom, titre = "Client"){
+    return (`Bonjour ${titre} ${nom}`);
 }
 
 let b = saluerClient("redouane")
